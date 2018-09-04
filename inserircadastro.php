@@ -11,9 +11,9 @@
     $objDb = new dbconsultapessoafisica();
     $link = $objDb->conecta_mysql();
 
-    $sql = "insert into usuarios(nome, email, senha,situacoes_id,niveis_acesso_id,created,modified) values
+    $sql = "insert into usuarios(nome, email, senha,situacoe_id,niveis_acesso_id,created,modified) values
         ('$nome','$email','$senha','$situacao','$classcliente','$criacao','$criacao')";
-
+  
     if (mysqli_query($link, $sql)){
         header('Location: cliente.php');
 		
