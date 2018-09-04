@@ -2,7 +2,7 @@
 class dbconsultapessoafisica {
 
     //host
-    public $host = 'localhost';
+    public $host = '127.0.0.1';
 
     //usuario
     public $usuario = 'root';
