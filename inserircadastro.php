@@ -19,18 +19,17 @@
         ('$nome','$email','$senha','$situacao','$classcliente','$criacao','$criacao')";
 	
 	$resultado_usuario = mysqli_query($con2, $sql);
-	$resultado = mysqli_fetch_assoc($sql);
+	$resultado = mysqli_fetch_assoc($resultado_usuario);
 	
-	$_SESSION['usuarioNome'] = $resultado['nome'];
-    $_SESSION['usuarioEmail'] = $resultado['Email'];
-    $_SESSION['usuarioNiveisAcessoId'] = $resultado['niveis_acesso_id'];
-    $_SESSION['usuarioEmail'] = $resultado['email'];
 	
     if (mysqli_query($link, $sql)){
 		session_start();
-		$_SESSION['usuarioNome'] = $resultado['nome'];
+			$_SESSION['usuarioNome'] = $resultado['nome'];
+			$_SESSION['usuarioEmail'] = $resultado['email'];
+			$_SESSION['usuarioNiveisAcessoId'] = $resultado['niveis_acesso_id'];
+			$_SESSION['usuarioSenha'] = $resultado['senha'];
         header('Location: cliente.php');
     } else{
         header('Location: efetuarcadastro.php');
     }
-	?>
+?>

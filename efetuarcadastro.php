@@ -42,7 +42,7 @@ http://www.templatemo.com/tm-496-pipeline
 					<input type="email" name="email" placeholder="Email">
 					<label>Senha</label>
 					<input type="password" name="senha" placeholder="Senha" required>
-					<input type="hidden" name="classcliente" value="2">
+					<input type="hidden" name="classcliente" value="3">
 					<input type="hidden" name="situacao" value="1"><br>
 					<label>Data do cadastro</label>
 					<input type="text" name="dataatual" value="<?php echo date('d/m/Y h:m:s');?>" />
