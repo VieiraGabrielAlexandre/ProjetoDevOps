@@ -18,6 +18,7 @@ http://www.templatemo.com/tm-496-pipeline
     <link rel="stylesheet" href="css/bootstrap.min.css">                                 <!-- Bootstrap style, http://v4-alpha.getbootstrap.com/ -->
     <link rel="stylesheet" href="css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
     <link rel="stylesheet" href="css/templatemo-style.css">                              <!-- Templatemo style -->
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,14 +35,21 @@ http://www.templatemo.com/tm-496-pipeline
                     <h1 class="tm-banner-title" style="color:ff4d00;">Abrace Sua Causa s2</h1>                        
                 </div>                    
             </section>
-				<form method="POST" action="valida.php">
+			<p id="p1"><a href="">voltar</a><p>
+				<form id="login"method="POST" action="valida.php">
+				<div id=login>
 					<h2>Login</h2>
 					<label>Email</label>
 					<input type="email" name="email" placeholder="Email" required autofocus>
 					<label>Senha</label>
 					<input type="password" name="senha" placeholder="Senha" required>
 					<button type="submit">Acessar</button>
+					</div>
 				</form>
+				<form id="legenda">
+				<label> <a href="">Cadastrar-se</a></label>
+				<label><a href="">esqueci minha senha</a></label>
+					</form>
 			<p>
             <?php if(isset($_SESSION['loginErro'])){
                 echo $_SESSION['loginErro'];
