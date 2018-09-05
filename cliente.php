@@ -1,5 +1,5 @@
 <?php
-    session_start();
+	session_start();
     echo "Usuario: ". $_SESSION['usuarioNome'];
 ?>
 <br>
